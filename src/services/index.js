@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
+import qs from 'qs'
 
 const request = axios.create({
   timeout: 5000,
@@ -40,12 +41,16 @@ class Http {
     })
   }
 
-  static post (url, params) {
-    return request.post(url, params, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+  static post (url, params, contentType = 'json') {
+    if (contentType === 'urlencoded') {
+      return request.post(url, qs.stringify(params))
+    } else {
+      return request.post(url, params, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+    }
   }
 }
 

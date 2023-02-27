@@ -5,16 +5,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
-  name: 'HomeView',
-  methods: {
-
-  },
-  mounted () {
-
-  }
+  name: 'HomeView'
 }
 </script>
 
