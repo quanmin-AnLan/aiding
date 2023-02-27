@@ -8,15 +8,6 @@ module.exports = defineConfig({
   outputDir: 'dist',
   assetsDir: 'assets',
   productionSourceMap: false,
-  chainWebpack: config => {
-    config
-      .plugin('html')
-      .tap(args => {
-        // 设默认title为游戏中心
-        args[0].title = '安澜网 - 游戏中心'
-        return args
-      })
-  },
   configureWebpack: {
     optimization: {
       splitChunks: {
