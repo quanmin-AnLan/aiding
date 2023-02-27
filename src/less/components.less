@@ -1,0 +1,67 @@
+// 抽离多行css通用样式
+.pos-f-auto {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.pos-f-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pos-a-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrongful {
+  border:1px solid @warn !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.common-icon {
+  cursor: pointer;
+}
+
+.common-input-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.common-input-line {
+  display: flex;
+}
+
+.common-input-label {
+  width: 150px;
+  text-align: right;
+}
+
+.common-input-value {
+  flex: 1;
+  text-align: left;
+  .text-overflow;
+}
+
+.inner-content {
+  padding: 16px 24px;
+}
